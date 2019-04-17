@@ -24,7 +24,7 @@ public class GroupOfCards
     public GroupOfCards(int givenSize)
     {
         size = givenSize;
-    } 
+    }
     
     /**
      * A method that will get the group of cards as an ArrayList
