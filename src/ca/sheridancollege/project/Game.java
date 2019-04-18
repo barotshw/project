@@ -6,8 +6,9 @@
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Scanner; 
 import java.util.Random;
+
 /**
  * A class to be used as the base Card class for the project. Must be general
  * enough to be instantiated for any Card game. Students wishing to add to the code 

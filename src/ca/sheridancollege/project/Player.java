@@ -6,7 +6,13 @@
 package ca.sheridancollege.project;
 
 /**
- * A class to be used as the base Card class for the project. Must be general
+ * Munmun_Nandi
+ * A class that models each Player in the game. Players have an identifier, which should be unique.
+ * @author dancye, 2018 
+ */
+public abstract class Player 
+
+/** A class to be used as the base Card class for the project. Must be general
  * enough to be instantiated for any Card game. Students wishing to add to the code 
  * should remember to add themselves as a modifier.
  * @author dancye, 2018
