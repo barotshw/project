@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;*/
 
 /**
  *
- * @author kaurh
+ * @author kaurh (Humpreet Kaur)
  */
 public class CardTest {
     
