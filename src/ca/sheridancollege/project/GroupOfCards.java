@@ -9,11 +9,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * A concrete class that represents any grouping of cards for a Game.
- * HINT, you might want to subclass this more than once.
- * The group of cards has a maximum size attribute which is flexible for reuse.
- * @author dancye (Humpreet Kaur)
- */
+ * A class to be used as the base Card class for the project. Must be general
+ * enough to be instantiated for any Card game. Students wishing to add to the code 
+ * should remember to add themselves as a modifier.
+ * @author dancye, 2018
+ **/
+
 public class GroupOfCards 
 {
    
@@ -43,6 +44,7 @@ public class GroupOfCards
     /**
      * @return the size of the group of cards
      */
+    //Encapsulation Example OOPS concept 
     public int getSize() {
         return size;
     }

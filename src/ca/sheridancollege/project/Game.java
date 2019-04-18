@@ -9,12 +9,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Random;
 /**
- * The class that models your game. You should create a more specific
- * child of this class and instantiate the methods given.
- * @author dancye, 2018 (Humpreet Kaur)
- */
+ * A class to be used as the base Card class for the project. Must be general
+ * enough to be instantiated for any Card game. Students wishing to add to the code 
+ * should remember to add themselves as a modifier.
+ * @author dancye, 2018
+ **/
 
-// This
+// This is a abstract class which extends from the Player
+//Uses principle of Open closed & Dependency inversion.
 public abstract class Game extends Player
 {
     private final String gameName;//the title of the game
