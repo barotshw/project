@@ -5,7 +5,7 @@
  */
 package ca.sheridancollege.project;
 
-import java.util.Random;
+import java.util.Random; 
 
 /**
  * A class to be used as the base Card class for the project. Must be general
