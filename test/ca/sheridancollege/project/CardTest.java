@@ -30,7 +30,25 @@ public class CardTest {
     public void testGetFaceGood() {
         System.out.println("getFace Good");
         Card instance = new Card();
-        String expResult = "";
+        String expResult = "[Blue 2]";
+        String result = instance.getFace();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testGetFaceBad() {
+        System.out.println("getFace Bad");
+        Card instance = new Card();
+        String expResult = "[Orange]";
+        String result = instance.getFace();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testGetFaceBoundary() {
+        System.out.println("getFace Boundary");
+        Card instance = new Card();
+        String expResult = "[Red 5]";
         String result = instance.getFace();
         assertEquals(expResult, result);
     }
@@ -39,12 +57,34 @@ public class CardTest {
      * Test of canPlace method, of class Card.
      */
     @Test
-    public void testCanPlace() {
-        System.out.println("canPlace");
+    public void testCanPlaceGood() {
+        System.out.println("canPlace Good");
         Card o = null;
-        String c = "";
+        String c = "Red";
+        Card instance = new Card();
+        boolean expResult = true;
+        boolean result = instance.canPlace(o, c);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testCanPlaceBad() {
+        System.out.println("canPlace Bad");
+        Card o = null;
+        String c = "Magenta";
         Card instance = new Card();
         boolean expResult = false;
+        boolean result = instance.canPlace(o, c);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testCanPlaceBoundary() {
+        System.out.println("canPlace Boundary");
+        Card o = null;
+        String c = "Blue";
+        Card instance = new Card();
+        boolean expResult = true;
         boolean result = instance.canPlace(o, c);
         assertEquals(expResult, result);
     }
