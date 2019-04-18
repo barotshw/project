@@ -1,20 +1,26 @@
 /**
  * SYST 17796 Project Winter 2019 Base code.
  * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
+ * Humpreet Kaur 2019/04/17
  */
 package ca.sheridancollege.project;
 
 /**
- * A class that models each Player in the game. Players have an identifier, which should be unique.
- * @author shweta, 2019
- */
-public abstract class Player 
+ * A class to be used as the base Card class for the project. Must be general
+ * enough to be instantiated for any Card game. Students wishing to add to the code 
+ * should remember to add themselves as a modifier.
+ * @author dancye, 2018
+ **/
+
+
+// This class has a sub-class thus using the concept of inheritance.
+// This class is also an abstract class thus completing the requirement for Dependancy Inversion.
+abstract public class Player 
 {
     private String playerID; //the unique ID for this player
     
     /**
-     * A constructor that allows you to set the player's unique ID
+     * A parameterized constructor that allows you to set the player's unique ID
      * @param name the unique ID to assign to this player.
      */
     public Player(String name)
@@ -23,6 +29,7 @@ public abstract class Player
     }
     
     /**
+     * getter to get playerID
      * @return the playerID
      */
     public String getPlayerID() 
@@ -31,7 +38,7 @@ public abstract class Player
     }
 
     /**
-     * Ensure that the playerID is unique
+     * setter to set the playerID
      * @param givenID the playerID to set
      */
     public void setPlayerID(String givenID) 
@@ -40,9 +47,11 @@ public abstract class Player
     }
     
     /**
-     * The method to be instantiated when you subclass the Player class
-     * with your specific type of Player and filled in with logic to play your game.
+     * Method play is overridden method which is overridden in Game class and it's body is changed according to Game.java class
+     * Using the concept of Overridden and inheritance thus fulfilling the Open Closed Principle.
      */
-    public abstract void play();
+    public void play() {
+        System.out.println("");
+    }
     
 }
