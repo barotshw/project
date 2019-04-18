@@ -1,7 +1,7 @@
 /**
  * SYST 17796 Project Winter 2019 Base code.
  * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
+ * Humpreet Kaur 2019/04/17
  */
 package ca.sheridancollege.project;
 
@@ -13,36 +13,32 @@ import java.util.Random;
  * should remember to add themselves as a modifier.
  * @author dancye, 2018
  */
-public  class Card 
+public class Card 
 {
-    //default modifier for child classes
-    
-    /**
-     * Students should implement this method for their specific children classes 
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
-    /**/
+    // Declaring variables of different data types
     public String color;
     public int value;
     private Random rand;
     private String face;
 
+    // Parameterized Constructor
     public Card(int v, String c)
     {
         value = v;
         color = c; 
     }
 
-    // Creates a random card
+    // Method that Creates a random card
     public Card()
     {
         rand = new Random();
-        value = rand.nextInt(28); // 108 cards in a standard Uno deck. Can be reduced to 27 (disregarding colors)
+        value = rand.nextInt(28); 
         // Assigning value
-        if (value >= 14) // Some cards are more common than others
+        if (value >= 14) // Check if value is greater than 14 then value = value - 14;
             value -= 14;
         // Assigning color
         rand = new Random();
+        // Switch statement for assigning different colors
         switch(rand.nextInt(4) )
         {
             case 0: color = "Red"; 
@@ -54,22 +50,20 @@ public  class Card
             case 3: color = "Yellow"; 
                 break;
         }
-        // If the card is a wild card
+        // If the card is a wild card and value is greater than or equal to 13 then none value is assigned to color variable
         if (value >= 13)
             color = "none";
     }
 
+    // Face method to set the face of the card means what players see such as [Red 2]
     public String getFace()
     {
-        /* Returns the face of the card (what the player sees)
-         * Ex. [Red 5]
-         */
         face = "[";
         if (color != "none")
         {
             face += this.color + " ";
         }
-
+        // Switch sttements to set diffrent faces 
         switch(this.value)
         {
             default: face += String.valueOf(this.value); 
@@ -89,8 +83,8 @@ public  class Card
         return face;
     }
 
-    // Determines if you can place this card on top of a given card
-    // The color needs to be specified because if a wild card was chosen in the previous round, the color would have changed, but the card staying the same
+    // To ensure that can we place this card on top of a given card
+    // Color should be changed for wild card but card should be same
     public boolean canPlace(Card o, String c)
     {
         if (this.color == c)
@@ -101,5 +95,4 @@ public  class Card
             return true;
         return false;
     }
-    
 }

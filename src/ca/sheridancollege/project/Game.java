@@ -1,7 +1,7 @@
 /**
  * SYST 17796 Project Winter 2019 Base code.
  * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
+ * Humpreet Kaur 2019/04/17
  */
 package ca.sheridancollege.project;
 
@@ -13,13 +13,16 @@ import java.util.Random;
  * child of this class and instantiate the methods given.
  * @author dancye, 2018
  */
-public abstract class Game 
+
+// This
+public abstract class Game extends Player
 {
     private final String gameName;//the title of the game
     private ArrayList <Player> players;// the players of the game
     
     public Game(String givenName)
     {
+        super(givenName);
         gameName = givenName;
         players = new ArrayList();
     }
@@ -52,7 +55,10 @@ public abstract class Game
      * Play the game. This might be one method or many method calls depending
      * on your game.
      */
-    public abstract void play();
+    public void play() {
+        System.out.println("---------Welcome to the UNO Game---------");
+        System.out.println("");
+    }
     
     /**
      * When the game is over, use this method to declare and display a winning
@@ -63,7 +69,7 @@ public abstract class Game
     
     
     public static void main(String[] args)
-    {
+    {  
         ArrayList<Card> playerdeck = new ArrayList<Card>();
         ArrayList<Card> compdeck = new ArrayList<Card>();
         int win; // 0 - no result; 1 - win; -1 - loss. 
@@ -81,11 +87,11 @@ public abstract class Game
             topCard = new Card();
             currentColor = topCard.color;
 
-            System.out.println("\nWelcome to Uno! Initialising decks...");
             draw(7, playerdeck);
             draw(7, compdeck);
-
+            
             /*****************Turns*****************/
+            System.out.println("---------Welcome to the UNO Game---------");
             for (boolean playersTurn = true; win == 0; playersTurn ^= true)
             {
                 choiceIndex = 0;
@@ -157,8 +163,11 @@ public abstract class Game
                                 break;
                             }
                         }
-                    } else System.out.println("Invalid choice. Turn skipped.");
-
+                    } 
+                    else {
+                        System.out.println("Invalid choice. Turn skipped.");
+                    }
+                            
 
                 } else /************ computer's turn **************/
                 {
