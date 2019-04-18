@@ -1,7 +1,7 @@
 /**
  * SYST 17796 Project Winter 2019 Base code.
  * Students can modify and extend to implement their game.
- * Humpreet Kaur 2019/04/17
+ * Simarjeet Kaur 2019/04/17 
  */
 package ca.sheridancollege.project;
 
@@ -20,6 +20,7 @@ import java.util.Random;
 public abstract class Game extends Player
 {
     private final String gameName;//the title of the game
+    //create an arraylist of players so that is easy to access that player who turn is there.
     private ArrayList <Player> players;// the players of the game
     
     public Game(String givenName)
@@ -92,14 +93,14 @@ public abstract class Game extends Player
             draw(7, playerdeck);
             draw(7, compdeck);
             
-            /*****************Turns*****************/
+            //turns of the players
             System.out.println("---------Welcome to the UNO Game---------");
             for (boolean playersTurn = true; win == 0; playersTurn ^= true)
             {
                 choiceIndex = 0;
                 System.out.println("\nThe top card is: " + topCard.getFace());
 
-                if (playersTurn) /*****Player's turn******/
+                if (playersTurn) //Player's turn
                 {
                     // Displaying user's deck
                     System.out.println("Your turn! Your choices:");
@@ -171,7 +172,7 @@ public abstract class Game extends Player
                     }
                             
 
-                } else /************ computer's turn **************/
+                } else //computer's turn
                 {
                     System.out.println("My turn! I have " + String.valueOf(compdeck.size() ) 
                                         + " cards left!" + ((compdeck.size() == 1) ? "...Uno!":"") );
@@ -231,7 +232,7 @@ public abstract class Game extends Player
 
             } // turns loop end
 
-            /*************Results**************/
+            //results
             if (win == 1)
                 System.out.println("You win :)");
             else 
@@ -251,8 +252,8 @@ public abstract class Game extends Player
     {
         for (int i = 0; i < cards; i++)
             deck.add(new Card() );
-    }
+    } 
 
    
     
-}//end class
+}
