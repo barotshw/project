@@ -7,7 +7,7 @@ package ca.sheridancollege.project;
 
 /**
  * A class that models each Player in the game. Players have an identifier, which should be unique.
- * @author dancye, 2018
+ * @author shweta, 2019
  */
 // This class has a sub-class thus using the concept of inheritance.
 // This class is also an abstract class thus completing the requirement for Dependancy Inversion.
